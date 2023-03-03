@@ -1,0 +1,83 @@
+% Abstract template for FisEs Joven'23
+
+% PLEASE DO NOT MODIFY THE FOLLOWING LINES.
+\documentclass[a4paper]{article}
+\usepackage{authblk, fancyhdr}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[left=25mm, right=25mm, top=15mm, bottom=20mm, noheadfoot]{geometry}
+
+\pagestyle{fancy}
+
+\providecommand{\keywords}[1]
+{
+  \small	
+  \textbf{\textit{Keywords---}} #1
+}
+
+\fancyhead[R]{}
+\fancyhead[L]{ \footnotesize{
+II Congreso FisEs Joven'23 – 16-17 Mayo, 2023}
+}
+
+\begin{document}
+ 
+% Please change the following abstract title and author description.
+\title{Abstract Title}
+
+\author[1]{Name Surname}
+\author[1,2]{Name Surname}
+\author[2]{Name Surname}
+
+\affil[1]{My Institute/Company}
+\affil[2]{My Institute/Company}
+% \affil[3]{My Institute/Company}
+
+% PLEASE DO NOT MODIFY THE FOLLOWING LINES.
+\date{}
+\maketitle\thispagestyle{fancy}
+\vspace*{-0.75cm}
+
+
+\keywords{one, two, three}\\ % ADD KEYWORDSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
+
+% BEGINNING OF MAIN ABSTRACT TEXT
+
+\textcolor{red}{\textbf{Please ensure that, when compiled, the abstract, figure and any references fit on  \underline{one page}}.}\\
+
+Write here your abstract.
+%
+You can cite articles or books such as Ref.~\cite{ref1} or Ref.~\cite{ref2}.
+%
+You can add figures (we encourage to include at least one figure), such as for example Fig.~\ref{fig}. \\
+%
+
+%Delete or comment the following lines if you do not want to include a figure in your abstract
+\begin{figure}[h]
+  \centering
+  \includegraphics[width=5cm]{example.png}
+  \caption{The figure caption goes here.}
+  \label{fig}
+\end{figure}
+
+Follows some dummy text.
+\lipsum[1-3]
+
+% END OF MAIN ABSTRACT TEXT
+
+% Please add references below. If you do not want to cite other works,
+% please delete or comment out the entire bibliography block below.
+
+\def\refname{\normalsize Bibliography}
+\begin{thebibliography}{}
+ \footnotesize % don't change this.
+ %
+ \bibitem{ref1} Last Name, F.N., \textit{This is an Article Title}, Journal Name \textbf{1}, 123-456, 2015.
+ \bibitem{ref2} Author, A.A., Another Author, B., \textit{This is a Book Title}, Publisher, 1998.
+\end{thebibliography}
+
+
+\end{document}
