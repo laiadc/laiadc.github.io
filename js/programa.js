@@ -84,30 +84,30 @@ const participantes =  [
             "HORA": "16:00:00",
             "NUMERO": "-"
            },
-        {
-         "NOMBRE": "Mar Cuevas Blanco",
-         "TITULO": "The architecture of multifunctional ecological networks",
-         "SLOT": 2,
-         "NOMBRE_SLOT": "complex networks",
-         "HORA": "16:10:00",
-         "NUMERO": 4
-        },
-        {
-         "NOMBRE": "Gonzalo Contreras Aso",
-         "TITULO": "The transition to synchronization of networked systems",
-         "SLOT": 2,
-         "NOMBRE_SLOT": "complex networks",
-         "HORA": "16:20:00",
-         "NUMERO": 5
-        },
-        {
-         "NOMBRE": "Beatriz Arregui García",
-         "TITULO": "Disentangling epidemics: a multiplex structure perspective",
-         "SLOT": 2,
-         "NOMBRE_SLOT": "complex networks",
-         "HORA": "16:30:00",
-         "NUMERO": 6
-        },
+           {
+            "NOMBRE": "Pau Esteve Ferrer",
+            "TITULO": "Distinguishing chaos from noise: a deep learning approach to nonlinear time series analysis",
+            "SLOT": 2,
+            "NOMBRE_SLOT": "Miscelánea",
+            "HORA": "16:10:00",
+            "NUMERO": 4
+           },
+           {
+            "NOMBRE": "Gregorio García Valladares",
+            "TITULO": "Stochastic resetting with refractory period through the lens of pathway formulation",
+            "SLOT": 2,
+            "NOMBRE_SLOT": "Miscelánea",
+            "HORA": "16:20:00",
+            "NUMERO": 5
+           },
+           {
+            "NOMBRE": "Jesús María Marcos Merino",
+            "TITULO": "Radial spreading of a thin-film model",
+            "SLOT": 2,
+            "NOMBRE_SLOT": "Miscelánea",
+            "HORA": "16:30:00",
+            "NUMERO": 6
+           },
         {
             "NOMBRE": " ",
             "TITULO": "Preguntas slot 2",
@@ -188,30 +188,30 @@ const participantes =  [
             "HORA": "18:20:00",
             "NUMERO": "-"
            },
-        {
-         "NOMBRE": "Natalia Ruiz Pino",
-         "TITULO": "Entropy reduction and energetic balance in feedback ratchets",
-         "SLOT": 5,
-         "NOMBRE_SLOT": "Information theory",
-         "HORA": "18:30:00",
-         "NUMERO": 13
-        },
-        {
-         "NOMBRE": "Juan Ignacio De Gregorio",
-         "TITULO": "Entropy estimation for Markovian sequences",
-         "SLOT": 5,
-         "NOMBRE_SLOT": "Information theory",
-         "HORA": "18:40",
-         "NUMERO": 14
-        },
-        {
-         "NOMBRE": "Irene Ferri Condeminas",
-         "TITULO": "Three-State Opinion Model with Mobile Agents",
-         "SLOT": 5,
-         "NOMBRE_SLOT": "Information theory",
-         "HORA": "18:50",
-         "NUMERO": 15
-        },
+           {
+            "NOMBRE": "Miguel Angel González Casado",
+            "TITULO": "The role of structural balance in personal networks dynamics",
+            "SLOT": 5,
+            "NOMBRE_SLOT": "socio-physics",
+            "HORA": "18:30:00",
+            "NUMERO": 13
+           },
+           {
+            "NOMBRE": "David Abella Bujalance",
+            "TITULO": "Ordering dynamics and aging in Threshold models",
+            "SLOT": 5,
+            "NOMBRE_SLOT": "socio-physics",
+            "HORA": "18:40:00",
+            "NUMERO": 14
+           },
+           {
+            "NOMBRE": "Diego Escribano Gómez",
+            "TITULO": "Exploring the complexities of the social world",
+            "SLOT": 5,
+            "NOMBRE_SLOT": "socio-physics",
+            "HORA": "18:50:00",
+            "NUMERO": 15
+           },
         {
             "NOMBRE": " ",
             "TITULO": "Preguntas slot 5",
@@ -258,30 +258,30 @@ const participantes2 = [
            "HORA": "16:00:00",
            "NUMERO": "-"
           },
-       {
-        "NOMBRE": "Pau Esteve Ferrer",
-        "TITULO": "Distinguishing chaos from noise: a deep learning approach to nonlinear time series analysis",
-        "SLOT": 7,
-        "NOMBRE_SLOT": "Miscelánea",
-        "HORA": "16:10:00",
-        "NUMERO": 19
-       },
-       {
-        "NOMBRE": "Gregorio García Valladares",
-        "TITULO": "Stochastic resetting with refractory period through the lens of pathway formulation",
-        "SLOT": 7,
-        "NOMBRE_SLOT": "Miscelánea",
-        "HORA": "16:20:00",
-        "NUMERO": 20
-       },
-       {
-        "NOMBRE": "Jesús María Marcos Merino",
-        "TITULO": "Radial spreading of a thin-film model",
-        "SLOT": 7,
-        "NOMBRE_SLOT": "Miscelánea",
-        "HORA": "16:30:00",
-        "NUMERO": 21
-       },
+          {
+            "NOMBRE": "Mar Cuevas Blanco",
+            "TITULO": "The architecture of multifunctional ecological networks",
+            "SLOT": 7,
+            "NOMBRE_SLOT": "complex networks",
+            "HORA": "16:10:00",
+            "NUMERO":19
+           },
+           {
+            "NOMBRE": "Gonzalo Contreras Aso",
+            "TITULO": "The transition to synchronization of networked systems",
+            "SLOT": 7,
+            "NOMBRE_SLOT": "complex networks",
+            "HORA": "16:20:00",
+            "NUMERO": 20
+           },
+           {
+            "NOMBRE": "Beatriz Arregui García",
+            "TITULO": "Disentangling epidemics: a multiplex structure perspective",
+            "SLOT": 7,
+            "NOMBRE_SLOT": "complex networks",
+            "HORA": "16:30:00",
+            "NUMERO": 21
+           },
        {
            "NOMBRE": " ",
            "TITULO": "Preguntas slot 7",
@@ -362,30 +362,31 @@ const participantes2 = [
            "HORA": "18:20:00",
            "NUMERO": "-"
           },
-       {
-        "NOMBRE": "Miguel Angel González Casado",
-        "TITULO": "The role of structural balance in personal networks dynamics",
-        "SLOT": 10,
-        "NOMBRE_SLOT": "socio-physics",
-        "HORA": "18:30:00",
-        "NUMERO": 28
-       },
-       {
-        "NOMBRE": "David Abella Bujalance",
-        "TITULO": "Ordering dynamics and aging in Threshold models",
-        "SLOT": 10,
-        "NOMBRE_SLOT": "socio-physics",
-        "HORA": "18:40:00",
-        "NUMERO": 29
-       },
-       {
-        "NOMBRE": "Diego Escribano Gómez",
-        "TITULO": "Exploring the complexities of the social world",
-        "SLOT": 10,
-        "NOMBRE_SLOT": "socio-physics",
-        "HORA": "18:50:00",
-        "NUMERO": 30
-       },
+          {
+            "NOMBRE": "Natalia Ruiz Pino",
+            "TITULO": "Entropy reduction and energetic balance in feedback ratchets",
+            "SLOT": 10,
+            "NOMBRE_SLOT": "Information theory",
+            "HORA": "18:30:00",
+            "NUMERO": 28
+           },
+           {
+            "NOMBRE": "Juan Ignacio De Gregorio",
+            "TITULO": "Entropy estimation for Markovian sequences",
+            "SLOT": 10,
+            "NOMBRE_SLOT": "Information theory",
+            "HORA": "18:40",
+            "NUMERO": 29
+           },
+           {
+            "NOMBRE": "Irene Ferri Condeminas",
+            "TITULO": "Three-State Opinion Model with Mobile Agents",
+            "SLOT": 10,
+            "NOMBRE_SLOT": "Information theory",
+            "HORA": "18:50",
+            "NUMERO": 30
+           },
+       
        {
            "NOMBRE": " ",
            "TITULO": "Preguntas slot 10",
