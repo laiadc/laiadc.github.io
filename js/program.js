@@ -9,10 +9,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
         addParticipant(programTable, participante);
     })
     
-    participantes_jueves.forEach(participante =>{
+    participantes2.forEach(participante =>{
         addParticipant(programTable2, participante);
     })
-    addFinalRow(programTable2, '19:20-19:30');
+    addFinalRow(programTable2, '19:10');
 })
 
 function addFinalRow(table,hora){
@@ -21,479 +21,377 @@ function addFinalRow(table,hora){
     `
     <td>${hora}</td>
     <td> - </td>
+    <td> - </td>
     <td>Closing remarks and awards</td>
     `;
     table.appendChild(finalRow);
 }
 function addParticipant(table, participante){
-    const {Nombre, Apellidos, Titulo, Slot, Hora, TopicId} = participante;
-    nombre_tot = Nombre + " " + Apellidos;
+    const {NOMBRE, TITULO, SLOT, NOMBRE_SLOT, HORA, NUMERO} = participante;
+    hora_short = HORA.substr(0, 5)
     const row = document.createElement('tr');
-    row.classList.add(colors[parseInt(Slot)-1]);
-    if(nombre_tot!==" "){
+    row.classList.add(colors[parseInt(SLOT)-1]);
+    if(NOMBRE!==" "){
         row.innerHTML = 
         `
-        <td>${Hora}</td>
-        <td> ${Slot} </td>
-        <td> <strong>${nombre_tot}.</strong> <i>${Titulo}.</i></td>
+        <td>${hora_short}</td>
+        <td> ${SLOT} </td>
+        <td> ${NUMERO} </td>
+        <td> <strong>${NOMBRE}.</strong> <i>${TITULO}.</i></td>
         `;
     } else{
         row.innerHTML = 
         `
-        <td>${Hora}</td>
-        <td> ${Slot} </td>
-        <td> ${Titulo}.</td>
+        <td>${hora_short}</td>
+        <td> ${SLOT} </td>
+        <td> ${NUMERO} </td>
+        <td> ${TITULO}.</td>
         `;
     }
     table.appendChild(row);
 }
 
-const participantes = [
+const participantes =  [
+        {
+         "NOMBRE": "Marta Pedrosa García-Moreno",
+         "TITULO": "Active transport in confinement",
+         "SLOT": 1,
+         "NOMBRE_SLOT": "Biophysics",
+         "HORA": "15:30:00",
+         "NUMERO": 1
+        },
+        {
+         "NOMBRE": "Marina Fernández Ruz",
+         "TITULO": "A theoretical approach to the complex chemical evolution of phosphorus in the interstellar medium",
+         "SLOT": 1,
+         "NOMBRE_SLOT": "Biophysics",
+         "HORA": "15:40:00",
+         "NUMERO": 2
+        },
+        {
+         "NOMBRE": "Belén Serrano Antón",
+         "TITULO": "Artificial intelligence for coronary structure segmentation",
+         "SLOT": 1,
+         "NOMBRE_SLOT": "Biophysics",
+         "HORA": "15:50:00",
+         "NUMERO": 3
+        },
+        {
+            "NOMBRE": " ",
+            "TITULO": "Preguntas slot 1",
+            "SLOT": "-",
+            "NOMBRE_SLOT": "-",
+            "HORA": "16:00:00",
+            "NUMERO": "-"
+           },
+        {
+         "NOMBRE": "Mar Cuevas Blanco",
+         "TITULO": "The architecture of multifunctional ecological networks",
+         "SLOT": 2,
+         "NOMBRE_SLOT": "complex networks",
+         "HORA": "16:10:00",
+         "NUMERO": 4
+        },
+        {
+         "NOMBRE": "Gonzalo Contreras Aso",
+         "TITULO": "The transition to synchronization of networked systems",
+         "SLOT": 2,
+         "NOMBRE_SLOT": "complex networks",
+         "HORA": "16:20:00",
+         "NUMERO": 5
+        },
+        {
+         "NOMBRE": "Beatriz Arregui García",
+         "TITULO": "Disentangling epidemics: a multiplex structure perspective",
+         "SLOT": 2,
+         "NOMBRE_SLOT": "complex networks",
+         "HORA": "16:30:00",
+         "NUMERO": 6
+        },
+        {
+            "NOMBRE": " ",
+            "TITULO": "Preguntas slot 2",
+            "SLOT": "-",
+            "NOMBRE_SLOT": "-",
+            "HORA": "16:40:00",
+            "NUMERO": "-"
+           },
+        {
+         "NOMBRE": "Alberto Martinez Serra",
+         "TITULO": "Size-dependent glassy kinetics of nanoparticle-protein corona complexes",
+         "SLOT": 3,
+         "NOMBRE_SLOT": "Quantum",
+         "HORA": "16:50:00",
+         "NUMERO": 7
+        },
+        {
+         "NOMBRE": "José Antonio Almanza Marrero ",
+         "TITULO": "Coherence for quantum enhanced thermodynamic performance in steady-state quantum thermal machines",
+         "SLOT": 3,
+         "NOMBRE_SLOT": "Quantum",
+         "HORA": "17:00:00",
+         "NUMERO": 8
+        },
+        {
+         "NOMBRE": "Juan Bautista Grau Climent",
+         "TITULO": "Mejora de la estabilidad para el sistema dinámico del juego cuántico de Cournot",
+         "SLOT": 3,
+         "NOMBRE_SLOT": "Quantum",
+         "HORA": "17:10",
+         "NUMERO": 9
+        },
+        {
+            "NOMBRE": " ",
+            "TITULO": "Preguntas slot 3",
+            "SLOT": "-",
+            "NOMBRE_SLOT": "-",
+            "HORA": "17:20:00",
+            "NUMERO": "-"
+         },
+        {
+            "NOMBRE": " ",
+            "TITULO": "Descanso",
+            "SLOT": "-",
+            "NOMBRE_SLOT": "-",
+            "HORA": "17:30:00",
+            "NUMERO": "-"
+           },
+        {
+         "NOMBRE": "Miguel Ibáñez García",
+         "TITULO": "Anomalous relaxation phenomena in trapped colloids: heating is faster than cooling",
+         "SLOT": 4,
+         "NOMBRE_SLOT": "granular &amp; colloidal systems",
+         "HORA": "17:50:00",
+         "NUMERO": 10
+        },
+        {
+         "NOMBRE": "Manuel Mayo León",
+         "TITULO": "Dynamics of a confined and ultraconfined vibrated granuar system",
+         "SLOT": 4,
+         "NOMBRE_SLOT": "granular &amp; colloidal systems",
+         "HORA": "18:00",
+         "NUMERO": 11
+        },
+        {
+         "NOMBRE": "Alejandro Almodovar ",
+         "TITULO": "Interacting particle systems with mobility and demographic dynamics as biological models",
+         "SLOT": 4,
+         "NOMBRE_SLOT": "granular &amp; colloidal systems",
+         "HORA": "18:10:00",
+         "NUMERO": 12
+        },
+        {
+            "NOMBRE": " ",
+            "TITULO": "Preguntas slot 4",
+            "SLOT": "-",
+            "NOMBRE_SLOT": "-",
+            "HORA": "18:20:00",
+            "NUMERO": "-"
+           },
+        {
+         "NOMBRE": "Natalia Ruiz Pino",
+         "TITULO": "Entropy reduction and energetic balance in feedback ratchets",
+         "SLOT": 5,
+         "NOMBRE_SLOT": "Information theory",
+         "HORA": "18:30:00",
+         "NUMERO": 13
+        },
+        {
+         "NOMBRE": "Juan Ignacio De Gregorio",
+         "TITULO": "Entropy estimation for Markovian sequences",
+         "SLOT": 5,
+         "NOMBRE_SLOT": "Information theory",
+         "HORA": "18:40",
+         "NUMERO": 14
+        },
+        {
+         "NOMBRE": "Irene Ferri Condeminas",
+         "TITULO": "Three-State Opinion Model with Mobile Agents",
+         "SLOT": 5,
+         "NOMBRE_SLOT": "Information theory",
+         "HORA": "18:50",
+         "NUMERO": 15
+        },
+        {
+            "NOMBRE": " ",
+            "TITULO": "Preguntas slot 5",
+            "SLOT": "-",
+            "NOMBRE_SLOT": "-",
+            "HORA": "19:00:00",
+            "NUMERO": "-"
+           },
+        
+       ]
+
+
+
+const participantes2 = [
     {
-        "Nombre": "Rodrigo",
-        "Apellidos": "Crespo Miguel",
-        "Universidad": "Universidad Complutense de Madrid",
-        "Titulo": "Resiliencia a fluctuaciones ambientales inducida por dispersión en poblaciones con Efecto Allee",
-        "Topic": "socio-physics",
-        "TopicId": "0",
-        "Slot": "1",
-        "Hora": "15:30-15:40"
-    },
-    {
-        "Nombre": "Riccardo",
-        "Apellidos": "Silini",
-        "Universidad": "UPC",
-        "Titulo": "Fast and effective measure for bivariate data-driven causal inference",
-        "Topic": "statistical mechanics",
-        "TopicId": "1",
-        "Slot": "1",
-        "Hora": "15:40-15:50"
-    },
-    {
-        "Nombre": "Ivan",
-        "Apellidos": "Gonzalez Torre",
-        "Universidad": "Vicomtech",
-        "Titulo": "On the physical origin of linguistic laws",
-        "Topic": "socio-physics",
-        "TopicId": "0",
-        "Slot": "1",
-        "Hora": "15:50-16:00"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Preguntas slot 1",
-        "Slot": "-",
-        "TopicId": "-",
-        "Hora": "16:00-16:10"
-    },
-    {
-        "Nombre": "Enrique",
-        "Apellidos": "Rodriguez Fernandez",
-        "Universidad": "Universidad Carlos III de Madrid",
-        "Titulo": "Transition between chaotic and stochastic universality classes of kinetic roughening",
-        "Topic": "phase transitions",
-        "TopicId": "3",
-        "Slot": "2",
-        "Hora": "16:10-16:20"
-    },
-    {
-        "Nombre": "Cintia",
-        "Apellidos": "Pulido Lamas",
-        "Universidad": "Universidad Complutense de Madrid",
-        "Titulo": "Cálculo del descenso crioscópico usando el modelo Madrid-2019 y el método de coexistencia directa",
-        "Topic": "phase transitions",
-        "TopicId": "3",
-        "Slot": "2",
-        "Hora": "16:20-16:30"
-    },
-    {
-        "Nombre": "Elena",
-        "Apellidos": "Sesé Sansa",
-        "Universidad": "EPFL",
-        "Titulo": "Phase separation of active Brownian disks in the presence of alignment",
-        "Topic": "phase transitions",
-        "TopicId": "3",
-        "Slot": "2",
-        "Hora": "16:30-16:40"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Preguntas slot 2",
-        "TopicId": "-",
-        "Slot": "-",
-        "Hora": "16:40-16:50"
-    },
-    {
-        "Nombre": "Victor",
-        "Apellidos": "Buendía",
-        "Universidad": "Universidad de Granada",
-        "Titulo": "Sincronización crítica en el cerebro: una perspectiva físico-estadística",
-        "Topic": "sincronization & oscillators",
-        "TopicId": "4",
-        "Slot": "3",
-        "Hora": "16:50-17:00"
-    },
-    {
-        "Nombre": "Iván",
-        "Apellidos": "León Merino",
-        "Universidad": "Universidad de Cantabria- IFCA",
-        "Titulo": "Osciladores acoplados: qué son, por qué son importantes y cómo describirlos.",
-        "Topic": "sincronization & oscillators",
-        "TopicId": "4",
-        "Slot": "3",
-        "Hora": "17:00-17:10"
-    },
-    {
-        "Nombre": "Sergi",
-        "Apellidos": "Granados Leyva",
-        "Universidad": "Universidad de Barcelona",
-        "Titulo": "Collective synchrony of paramagnetic particles in the presence of hydrodynamics",
-        "Topic": "sincronization & oscillators",
-        "TopicId": "4",
-        "Slot": "3",
-        "Hora": "17:10-17:20"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Preguntas slot 3",
-        "TopicId": "-",
-        "Slot": "-",
-        "Hora": "17:20-17:30"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Café",
-        "TopicId": "-",
-        "Slot": "-",
-        "Hora": "17:30-17:50"
-    },
-    {
-        "Nombre": "Pablo",
-        "Apellidos": "Lozano Rodríguez",
-        "Universidad": "Universidad Carlos III de Madrid",
-        "Titulo": "Hierarchies and cooperation: an experiment",
-        "Topic": "socio-physics",
-        "TopicId": "0",
-        "Slot": "4",
-        "Hora": "17:50-18:00"
-    },
-    {
-        "Nombre": "Juan",
-        "Apellidos": "Ozaita Corral",
-        "Universidad": "UC3M",
-        "Titulo": "Ethnic Markers",
-        "Topic": "socio-physics",
-        "TopicId": "0",
-        "Slot": "4",
-        "Hora": "18:00-18:10"
-    },
-    {
-        "Nombre": "Javier",
-        "Apellidos": "Cristín",
-        "Universidad": "Universitat Autònoma de Barcelona",
-        "Titulo": "Decision making in humans from the perspective of statistical physics",
-        "Topic": "socio-physics",
-        "TopicId": "0",
-        "Slot": "4",
-        "Hora": "18:10-18:20"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Preguntas slot 4",
-        "TopicId": "-",
-        "Slot": "-",
-        "Hora": "18:20-18:30"
-    },
-    {
-        "Nombre": "Alberto",
-        "Apellidos": "Molina Cardín",
-        "Universidad": "Universidad Complutense de Madrid",
-        "Titulo": "Asimetría temporal del campo magnético terrestre a partir de un modelo browniano",
-        "Topic": "statistical mechanics",
-        "TopicId": "1",
-        "Slot": "5",
-        "Hora": "18:30-18:40"
-    },
-    {
-        "Nombre": "José",
-        "Apellidos": "Martín-Roca",
-        "Universidad": "Universidad Complutense de Madrid",
-        "Titulo": "Suspensions of Active Brownian particles interacting via two repulsivelength scales",
-        "Topic": "statistical mechanics",
-        "TopicId": "1",
-        "Slot": "5",
-        "Hora": "18:40-18:50"
-    },
-    {
-        "Nombre": "Carlos",
-        "Apellidos": "Lajusticia Costan",
-        "Universidad": "UNED",
-        "Titulo": "Random walkers on a deformable medium",
-        "Topic": "statistical mechanics",
-        "TopicId": "1",
-        "Slot": "5",
-        "Hora": "18:50-19:00"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Preguntas slot 5",
-        "TopicId": "-",
-        "Slot": "-",
-        "Hora": "19:00-19:10"
-    },
-    {
-        "Nombre": "Rubén",
-        "Apellidos": "Hurtado Gutiérrez",
-        "Universidad": "Universidad de Granada",
-        "Titulo": "Spectral signature of dynamical phase transitions",
-        "Topic": "phase transitions",
-        "TopicId": "3",
-        "Slot": "6",
-        "Hora": "19:10-19:20"
-    },
-    {
-        "Nombre": "Daniel",
-        "Apellidos": "Villarrubia Moreno",
-        "Universidad": "Universidad Carlos III de Madrid",
-        "Titulo": "First Passage Percolation under extreme disorder",
-        "Topic": "phase transitions",
-        "TopicId": "3",
-        "Slot": "6",
-        "Hora": "19:20-19:30"
-    },
-    {
-        "Nombre": "Beatriz",
-        "Apellidos": "García Barreales",
-        "Universidad": "Universidad de Extremadura",
-        "Titulo": "Kardar–Parisi–Zhang universality class for the critical dynamics of reaction– diffusion fronts",
-        "Topic": "phase transitions",
-        "TopicId": "3",
-        "Slot": "6",
-        "Hora": "19:30-19:40"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Preguntas slot 6",
-        "TopicId": "-",
-        "Slot": "-",
-        "Hora": "19:40-19:50"
-    }
-]
-participantes_jueves = [
-    {
-        "Nombre": "Adriana",
-        "Apellidos": "Reyna Lara",
-        "Universidad": "Universidad de Zaragoza",
-        "Titulo": "Adaptive mobility policies in metapopulations",
-        "Topic": "dynamical processes on networks",
-        "TopicId": "5",
-        "Slot": "7",
-        "Hora": "15:30-15:40"
-    },
-    {
-        "Nombre": "Jorge P.",
-        "Apellidos": "Rodríguez-García",
-        "Universidad": "Universidad de Zaragoza",
-        "Titulo": "The global network of ports supporting high seas fishing",
-        "Topic": "complex networks",
-        "TopicId": "5",
-        "Slot": "7",
-        "Hora": "15:40-15:50"
-    },
-    {
-        "Nombre": "Lluís",
-        "Apellidos": "Danús Amengual",
-        "Universidad": "Universitat Rovira i Virgili",
-        "Titulo": "Different collaboration patterns and impact of prominent researchers in Europe and North America",
-        "Topic": "complex networks",
-        "TopicId": "5",
-        "Slot": "7",
-        "Hora": "15:50-16:00"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Preguntas slot 7",
-        "TopicId": "-",
-        "Slot": "-",
-        "Hora": "16:00-16:10"
-    },
-    {
-        "Nombre": "Sergio",
-        "Apellidos": "Faci-Lázaro",
-        "Universidad": "Universidad de Zaragoza",
-        "Titulo": "Resistencia funcional de redes de cultivos de neuronas",
-        "Topic": "dynamical processes on networks",
-        "TopicId": "5",
-        "Slot": "8",
-        "Hora": "16:10-16:20"
-    },
-    {
-        "Nombre": "Pau",
-        "Apellidos": "Casanova Ferrer",
-        "Universidad": "Universidad Carlos III de Madrid",
-        "Titulo": "Unravelling patA function in Anabaena heterocyst formation",
-        "Topic": "biophysics",
-        "TopicId": "6",
-        "Slot": "8",
-        "Hora": "16:20-16:30"
-    },
-    {
-        "Nombre": "Javier",
-        "Apellidos": "Diaz Brañas",
-        "Universidad": "École polytechnique fédérale de Lausanne",
-        "Titulo": "Simulaciones de nanopartículas anisotrópicas en mezclas de copolímeros",
-        "Topic": "biophysics",
-        "TopicId": "6",
-        "Slot": "8",
-        "Hora": "16:30-16:40"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Preguntas slot 8",
-        "TopicId": "-",
-        "Slot": "-",
-        "Hora": "16:40-16:50"
-    },
-    {
-        "Nombre": "Begoña",
-        "Apellidos": "Mula Martín",
-        "Universidad": "Universidad Nacional de Educación a Distancia (UNED)",
-        "Titulo": "Casimir forces on deformed fermionic chains",
-        "Topic": "statistical mechanics",
-        "TopicId": "1",
-        "Slot": "9",
-        "Hora": "16:50-17:00"
-    },
-    {
-        "Nombre": "Carlos A.",
-        "Apellidos": "Plata Ramos",
-        "Universidad": "Université Paris-Saclay",
-        "Titulo": "Optimal performance of stochastic irreversible Carnot-like heat engines",
-        "Topic": "statistical mechanics",
-        "TopicId": "1",
-        "Slot": "9",
-        "Hora": "17:00-17:10"
-    },
-    {
-        "Nombre": "Alberto",
-        "Apellidos": "Megías Fernández",
-        "Universidad": "Universidad de Extremadura",
-        "Titulo": "Toy model for the relative entropy of a granular gas",
-        "Topic": "statistical mechanics",
-        "TopicId": "1",
-        "Slot": "9",
-        "Hora": "17:10-17:20"
-    },
-    {
-        "Nombre": "Jorge",
-        "Apellidos": "Tabanera Bravo",
-        "Universidad": "Universidad Complutense de Madrid",
-        "Titulo": "Self-Oscillations in Nanomechanical Devices",
-        "Topic": "statistical mechanics",
-        "TopicId": "1",
-        "Slot": "9",
-        "Hora": "17:20-17:30"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Preguntas slot 9",
-        "TopicId": "-",
-        "Slot": "-",
-        "Hora": "17:30-17:40"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Café",
-        "TopicId": "-",
-        "Slot": "-",
-        "Hora": "17:40-18:00"
-    },
-    {
-        "Nombre": "Rodrigo Caitano",
-        "Apellidos": "Barbosa da Silva",
-        "Universidad": "Universidad de Navarra",
-        "Titulo": "El atasco de un sistema granular como transición de fase",
-        "Topic": "granular & colloidal systems",
-        "TopicId": "5",
-        "Slot": "10",
-        "Hora": "18:00-18:10"
-    },
-    {
-        "Nombre": "Diego",
-        "Apellidos": "Ortega Hernández",
-        "Universidad": "UNED",
-        "Titulo": "Urban gentrification as an avalanche process",
-        "Topic": "mobility",
-        "TopicId": "7",
-        "Slot": "10",
-        "Hora": "18:10-18:20"
-    },
-    {
-        "Nombre": "Joan",
-        "Apellidos": "Codina Sala",
-        "Universidad": "Institute of Physics, Beijing. China",
-        "Titulo": "The role of motility in effective out-of-equilibrium interactions",
-        "Topic": "mobility",
-        "TopicId": "7",
-        "Slot": "10",
-        "Hora": "18:20-18:30"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Preguntas slot 10",
-        "Slot": "-",
-        "TopicId": "-",
-        "Hora": "18:30-18:40"
-    },
-    {
-        "Nombre": "Rubén",
-        "Apellidos": "Gómez González",
-        "Universidad": "Universidad de Extremadura",
-        "Titulo": "Efecto Mpemba en suspensiones moleculares binarias",
-        "Topic": "molecular physics",
-        "TopicId": "2",
-        "Slot": "11",
-        "Hora": "18:40-18:50"
-    },
-    {
-        "Nombre": "Luis Enrique",
-        "Apellidos": "Coronas Serna",
-        "Universidad": "Universitat de Barcelona",
-        "Titulo": "Coarse grained model for water and water-protein interfaces",
-        "Topic": "molecular physics",
-        "TopicId": "2",
-        "Slot": "11",
-        "Hora": "18:50-19:00"
-    },
-    {
-        "Nombre": "Raul",
-        "Apellidos": "Martinez Fernandez",
-        "Universidad": "Universidad Autonoma de Madrid",
-        "Titulo": "On the molecular origin on tribotaxis",
-        "Topic": "molecular physics",
-        "TopicId": "2",
-        "Slot": "11",
-        "Hora": "19:00-19:10"
-    },
-    {
-        "Nombre": "",
-        "Apellidos": "",
-        "Titulo": "Preguntas slot 11",
-        "TopicId": "-",
-        "Slot": "-",
-        "Hora": "19:10-19:20"
-    }
-    
+        "NOMBRE": "Santiago Lamata Otín",
+        "TITULO": "Collapse transition in contagion dynamics subject to detection with limited resources",
+        "SLOT": 6,
+        "NOMBRE_SLOT": "Epidemics",
+        "HORA": "15:30:00",
+        "NUMERO": 16
+       },
+       {
+        "NOMBRE": "Àlex Giménez Romero",
+        "TITULO": "Vector-borne diseases with non-stationary vector populations: the case of growing and decaying populations",
+        "SLOT": 6,
+        "NOMBRE_SLOT": "Epidemics",
+        "HORA": "15:40:00",
+        "NUMERO": 17
+       },
+       {
+        "NOMBRE": "Javier Aguilar Sánchez",
+        "TITULO": "Endemic infectious states below the epidemic threshold and beyond herd immunity",
+        "SLOT": 6,
+        "NOMBRE_SLOT": "Epidemics",
+        "HORA": "15:50:00",
+        "NUMERO": 18
+       },
+       {
+           "NOMBRE": " ",
+           "TITULO": "Preguntas slot 6",
+           "SLOT": "-",
+           "NOMBRE_SLOT": "-",
+           "HORA": "16:00:00",
+           "NUMERO": "-"
+          },
+       {
+        "NOMBRE": "Pau Esteve Ferrer",
+        "TITULO": "Distinguishing chaos from noise: a deep learning approach to nonlinear time series analysis",
+        "SLOT": 7,
+        "NOMBRE_SLOT": "Miscelánea",
+        "HORA": "16:10:00",
+        "NUMERO": 19
+       },
+       {
+        "NOMBRE": "Gregorio García Valladares",
+        "TITULO": "Stochastic resetting with refractory period through the lens of pathway formulation",
+        "SLOT": 7,
+        "NOMBRE_SLOT": "Miscelánea",
+        "HORA": "16:20:00",
+        "NUMERO": 20
+       },
+       {
+        "NOMBRE": "Jesús María Marcos Merino",
+        "TITULO": "Radial spreading of a thin-film model",
+        "SLOT": 7,
+        "NOMBRE_SLOT": "Miscelánea",
+        "HORA": "16:30:00",
+        "NUMERO": 21
+       },
+       {
+           "NOMBRE": " ",
+           "TITULO": "Preguntas slot 7",
+           "SLOT": "-",
+           "NOMBRE_SLOT": "-",
+           "HORA": "16:40:00",
+           "NUMERO": "-"
+          },
+       {
+        "NOMBRE": "Miguel Camarillo Sánchez ",
+        "TITULO": "Study of the effect of crystal lattice mismatch on heterogeneous ice nucleation",
+        "SLOT": 8,
+        "NOMBRE_SLOT": "molecular physics",
+        "HORA": "16:50:00",
+        "NUMERO": 22
+       },
+       {
+        "NOMBRE": "Roger Bellido Peralta",
+        "TITULO": "Water methanol mixture confined in a graphene slit pore",
+        "SLOT": 8,
+        "NOMBRE_SLOT": "molecular physics",
+        "HORA": "17:00:00",
+        "NUMERO": 23
+       },
+       {
+        "NOMBRE": "Alejandro Sáinz Agost",
+        "TITULO": "End pulled polymer translocation under time dependent driving",
+        "SLOT": 8,
+        "NOMBRE_SLOT": "molecular physics",
+        "HORA": "17:10:00",
+        "NUMERO": 24
+       },
+       {
+           "NOMBRE": " ",
+           "TITULO": "Preguntas slot 8",
+           "SLOT": "-",
+           "NOMBRE_SLOT": "-",
+           "HORA": "17:20:00",
+           "NUMERO": "-"
+          },
+          {
+           "NOMBRE": " ",
+           "TITULO": "Descanso",
+           "SLOT": "-",
+           "NOMBRE_SLOT": "-",
+           "HORA": "17:30:00",
+           "NUMERO": "-"
+          },
+       {
+        "NOMBRE": "Samuel Blázquez Fernández",
+        "TITULO": "Three phase equilibria of the methane hydrate in NaCl solutions: a simulation study",
+        "SLOT": 9,
+        "NOMBRE_SLOT": "phase transitions",
+        "HORA": "17:50:00",
+        "NUMERO": 25
+       },
+       {
+        "NOMBRE": "Miguel Aguilar Janita",
+        "TITULO": "Numerical evidence for a phase transition in the six dimensional Ising spin glass on a field",
+        "SLOT": 9,
+        "NOMBRE_SLOT": "phase transitions",
+        "HORA": "18:00:00",
+        "NUMERO": 26
+       },
+       {
+        "NOMBRE": "Ylann ROUZAIRE",
+        "TITULO": "Active defects unbind and superdiffuse",
+        "SLOT": 9,
+        "NOMBRE_SLOT": "phase transitions",
+        "HORA": "18:10:00",
+        "NUMERO": 27
+       },
+       {
+           "NOMBRE": " ",
+           "TITULO": "Preguntas slot 9",
+           "SLOT": "-",
+           "NOMBRE_SLOT": "-",
+           "HORA": "18:20:00",
+           "NUMERO": "-"
+          },
+       {
+        "NOMBRE": "Miguel Angel González Casado",
+        "TITULO": "The role of structural balance in personal networks dynamics",
+        "SLOT": 10,
+        "NOMBRE_SLOT": "socio-physics",
+        "HORA": "18:30:00",
+        "NUMERO": 28
+       },
+       {
+        "NOMBRE": "David Abella Bujalance",
+        "TITULO": "Ordering dynamics and aging in Threshold models",
+        "SLOT": 10,
+        "NOMBRE_SLOT": "socio-physics",
+        "HORA": "18:40:00",
+        "NUMERO": 29
+       },
+       {
+        "NOMBRE": "Diego Escribano Gómez",
+        "TITULO": "Exploring the complexities of the social world",
+        "SLOT": 10,
+        "NOMBRE_SLOT": "socio-physics",
+        "HORA": "18:50:00",
+        "NUMERO": 30
+       },
+       {
+           "NOMBRE": " ",
+           "TITULO": "Preguntas slot 10",
+           "SLOT": "-",
+           "NOMBRE_SLOT": "-",
+           "HORA": "19:00:00",
+           "NUMERO": "-"
+          },
 ]
