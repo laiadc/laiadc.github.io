@@ -93,13 +93,14 @@ const participantes =  [
             "NUMERO": 4
            },
            {
-            "NOMBRE": "Gregorio García Valladares",
-            "TITULO": "Stochastic resetting with refractory period through the lens of pathway formulation",
+            "NOMBRE": "Natalia Ruiz Pino",
+            "TITULO": "Entropy reduction and energetic balance in feedback ratchets",
             "SLOT": 2,
-            "NOMBRE_SLOT": "Miscelánea",
+            "NOMBRE_SLOT": "Information theory",
             "HORA": "16:20:00",
             "NUMERO": 5
            },
+           
            {
             "NOMBRE": "Jesús María Marcos Merino",
             "TITULO": "Radial spreading of a thin-film model",
@@ -362,11 +363,12 @@ const participantes2 = [
            "HORA": "18:20:00",
            "NUMERO": "-"
           },
+        
           {
-            "NOMBRE": "Natalia Ruiz Pino",
-            "TITULO": "Entropy reduction and energetic balance in feedback ratchets",
+            "NOMBRE": "Gregorio García Valladares",
+            "TITULO": "Stochastic resetting with refractory period through the lens of pathway formulation",
             "SLOT": 10,
-            "NOMBRE_SLOT": "Information theory",
+            "NOMBRE_SLOT": "Miscelánea",
             "HORA": "18:30:00",
             "NUMERO": 28
            },
